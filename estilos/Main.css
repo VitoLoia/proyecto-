@@ -1,0 +1,287 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  grid-template: "header header header" 250px "register main sidebar" auto "footer footer footer" 250px/ 350px   auto   280px;
+}
+
+.grid-container > * {
+  background-color: black;
+  color: white;
+  max-width: 2500px;
+  -webkit-box-shadow: -1px 1px 7px 0px black;
+          box-shadow: -1px 1px 7px 0px black;
+  border-radius: 0px;
+  padding: 2px;
+  text-align: center;
+}
+
+.header {
+  grid-area: header;
+  height: 250px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+}
+
+.header .header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  float: right;
+  max-width: 992px;
+}
+
+.header .header__nav .nav__link {
+  color: white;
+  text-decoration: none;
+}
+
+.header .header__nav .nav__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
+  background-color: black;
+}
+
+.header .header__nav .nav__menu1 {
+  font-size: 18px;
+  margin: 0 18px;
+  line-height: 90px;
+  text-transform: uppercase;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.header .header__nav .nav__menu2 {
+  padding: 30px 12px;
+  border-radius: 6px;
+}
+
+.header .header__nav .nav__menu2:hover {
+  background-color: #414141;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.header .header__logo {
+  height: 90px;
+  width: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+}
+
+.header .header__a {
+  float: left;
+}
+
+.main {
+  grid-area: main;
+  background-color: black;
+  height: 100px 50px 30px 50px;
+  padding: 50px 30px 30px 30px;
+}
+
+.main .main__cuadro {
+  color: white;
+  border: 1px solid white;
+  margin: 40px;
+  padding: 20px;
+  overflow: hidden;
+  display: block;
+}
+
+.register {
+  grid-area: register;
+  height: auto;
+  text-align: left;
+  padding: 150px 30px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.register .register__contenedor {
+  padding: 10px;
+}
+
+.footer {
+  grid-area: footer;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: black;
+}
+
+.footer .footer__box {
+  padding: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .footer__img {
+  height: 100px;
+}
+
+@-webkit-keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes aparecer2 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes aparecer2 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.primero {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-name: aparecer;
+          animation-name: aparecer;
+}
+
+.segundo {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-name: aparecer2;
+          animation-name: aparecer2;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.cuadro {
+  border-color: white;
+}
+
+.tamaño__imagen {
+  height: 190px;
+}
+
+@media (min-width: 600px) {
+  .grid-container {
+    display: -ms-grid;
+    display: grid;
+    grid-template: "header header header" 250px "register main sidebar" auto "footer footer footer" 200px/ 350px   auto   280px;
+  }
+}
+
+.space {
+  padding: 40px;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 0.75em;
+}
+
+h6 {
+  font-size: 0.35em;
+}
+
+.cubo1 {
+  background-color: #474747;
+  width: 1850px;
+  height: 150px;
+  padding: 10px;
+}
+
+.cuadrado1 {
+  background-color: #302d2d;
+  padding: 10px;
+  border-radius: 5%;
+  width: 300px;
+  height: 200px;
+}
+
+.button {
+  background-color: white;
+}
+/*# sourceMappingURL=main.css.map */

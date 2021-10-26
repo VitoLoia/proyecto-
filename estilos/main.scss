@@ -1,0 +1,227 @@
+$color1: black;
+$color2: white;
+$color3: grey;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.grid-container{
+    display: grid;
+    grid-template:
+    "header header header" 250px
+    "register main sidebar" auto
+    "footer footer footer" 250px/
+    350px   auto   280px;
+}
+.grid-container > *{
+    background-color: $color1;
+    color: $color2;
+    max-width: 2500px;
+    box-shadow: -1px 1px 7px 0px $color1;
+    border-radius: 0px;
+    padding: 2px;
+    text-align: center;
+}
+
+
+.header{
+    grid-area: header;
+    height:250px ;    
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-family: 'Courier New', Courier, monospace;
+    color: $color2;
+    .header__nav{
+        display: flex;
+        justify-content: space-between;
+        float: right;
+        max-width: 992px;
+            .nav__link{
+                color: $color2;
+                text-decoration: none;
+                }
+            .nav__menu{
+                display: flex;
+                margin-right: 40px;
+                list-style: none;
+                background-color: black;
+                }
+            .nav__menu1{
+                font-size: 18px;
+                margin: 0 18px;
+                line-height: 90px;
+                text-transform: uppercase;
+                width: max-content;
+            }
+            .nav__menu2{
+                padding: 30px 12px;
+                border-radius: 6px;
+            }
+            .nav__menu2:hover{
+                background-color: rgb(65, 65, 65);
+                transition: 0.5s;
+                }
+    }
+    .header__logo{
+        height: 90px;
+        width: 90px;
+        display: flex;
+        position: absolute;    
+    }
+    .header__a{
+        float:left;
+    }
+}
+.main{
+    grid-area: main;
+    background-color: $color1;
+    height: 100px 50px 30px 50px;
+    padding: 50px 30px 30px 30px;
+    .main__cuadro{
+        color: $color2;
+        border: 1px solid $color2;
+        margin: 40px;
+        padding: 20px;
+        overflow: hidden;
+        display: block;
+    }
+}
+
+.register{
+    grid-area: register;
+    height: auto;
+    text-align: left;
+    padding: 150px 30px;
+    font-family: 'Courier New', Courier, monospace;
+    .register__contenedor{
+        padding:10px;
+    }
+}
+.footer{
+    grid-area:footer;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    .footer__box{
+        padding: 10px;
+        align-items: center;
+        display: flex;
+        margin: 10px;
+        justify-content: center;
+    }
+    .footer__img{
+        height: 100px;
+    }
+}
+
+@keyframes aparecer {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+ }
+ @keyframes aparecer2 {
+    0% {
+      opacity: 0;
+    }
+    10% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    30%{
+        opacity:0 ;
+    }
+    40%{
+        opacity:0;
+    }
+    100% {
+      opacity: 1;
+    }
+ }
+
+ .primero{
+    animation-duration: 4s;
+    animation-name: aparecer;
+}
+.segundo{
+    animation-duration: 4s;
+    animation-name: aparecer2;
+}
+.sidebar{
+    grid-area: sidebar;
+}
+
+.cuadro{
+    border-color: $color2;
+
+}
+
+.tamaño__imagen{
+    height: 190px;
+}
+@media (min-width: 600px){
+    .grid-container{
+        display: grid;
+        grid-template:
+        "header header header" 250px
+        "register main sidebar" auto
+        "footer footer footer" 200px/
+        350px   auto   280px;
+    }
+}
+
+.space{
+    padding: 40px;
+}
+
+$heading: (
+    h1: 4em,
+    h2: 3em,
+    h3: 2em,
+    h4: 1em,
+    h5: 0.75em,
+    h6: 0.35em
+);
+ 
+@each $heading, $size in $heading{
+    #{$heading} {
+        font-size: $size;
+    }
+}
+
+$letter: (
+    letter1: 2em,
+    letter2: 1em,
+    letter3: 0.80em,
+    letter4: 0.60em
+);
+
+@mixin cubo {
+    background-color: rgb(71, 71, 71);
+    width: 1850px;
+    height: 150px;
+    padding: 10px;    
+}
+.cubo1{
+    @include cubo;
+}
+
+@mixin cuadrad {
+    background-color: rgb(48, 45, 45);
+    padding: 10px;   
+    border-radius: 5%; 
+}
+.cuadrado1{
+    @include cuadrad;
+    width: 300px;
+    height: 200px;
+}
+.button{
+    background-color: white;
+}

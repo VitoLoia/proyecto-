@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Datautos - Informacion Automovilistica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Datautos es una pagina informativa del ambito automovilistico. Aqui encontraras toda la informacion de tus autos favoritos.">
+    <link rel="stylesheet" href="./estilos/Main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" ></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+</head>
+
+
+<body class="grid-container"> 
+    <header class="header ">
+        <a href="index.html" class="header__logo nav__link primero"><img src="./imagenes/logo3.png" ></a>
+        <nav class="header__nav">
+            <ul class="nav__menu nav-menu_visible">
+            <li class="nav__menu1"><a href="./seccion/Autos deportivos.html" class="nav__menu2 nav__link nav-menu-link_active primero">Autos deportivos</a></li>
+            <li class="nav__menu1"><a href="./seccion/Camionetas.html" class="nav__menu2 nav__link nav-menu-link_active primero">Camionetas</a></li>
+            <li class="nav__menu1"><a href="./seccion/Motos.html" class="nav__menu2 nav__link nav-menu-link_active primero">Motos</a></li>
+            <li class="nav__menu1"><a href="./seccion/Contacto.html" class="nav__menu2 nav__link nav-menu-link_active primero">Contacto</a></li>
+          </ul>
+        </nav>
+    </header>
+    
+    <section class="register ">
+        <div class="register__contenedor primero cuadrado1">
+                <h5>Ingrese su cuenta:  </h5>
+                <form action="#">
+                <div class="form-group ">
+                <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Ingrese email" name="email">
+               </div>
+               <div class="form-group ">
+                <label for="Contraseña">Contraseña:</label>
+                <input type="Contraseña" class="form-control" id="email" placeholder="Ingrese su contraseña" name="contraseña">
+              </div>
+              <div class="">
+                <button type="submit"><span>Ingresar</span>
+                </button>
+                 </div>
+             </form>
+        </div> 
+    </section>
+    
+    <aside class="sidebar ">
+        <img class="primero" src="./imagenes/audi.jpg" alt="buga">
+    </aside>
+    
+    <article class="main space " color="black">
+        <div id="demo" class="carousel slide segundo " data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+            
+            <!-- The slideshow -->
+            <div class="carousel-inner ">
+              <div class="carousel-item active">
+                <img src="./imagenes/Audi-R8 boostrap.jpg" alt="Los Angeles" width="1000" height="500">
+              </div>
+              <div class="carousel-item ">
+                <img src="./imagenes/918-spyder boostrap.jpg" alt="Chicago" width="1000" height="500">
+              </div>
+              <div class="carousel-item ">
+                <img src="./imagenes/supra boostrap.jpg" alt="New York" width="1000" height="500">
+              </div>
+            </div>
+            
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          </div>
+
+          <strong class="main__cuadro segundo space"><h5><p  align="center">En el siguiente video, se puede observar la apreciacion de la Moto Yamaha R6 a fondo, siendo probada por un profesional</p></h5></strong>
+          <p align="center" class="segundo space " ><iframe width="560" height="315" src="https://www.youtube.com/embed/52VhT11jE8o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+          <p class="segundo">-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+      </article>  
+    
+    <footer class="footer ">
+        <div class="footer__box segundo cubo1">
+        <a href="https://instagram.com" target="_BLANK"><img class="footer__img" src="./imagenes/ig.png" alt="ig"></a>        
+        <h6><p class="Sans-serif2">  Pueden encontrarnos en Instagram como @Datautos</p></h6></div>
+    </footer>
+</body>
+</html>
